@@ -26,7 +26,7 @@ export const EditPage = () => {
     };
 
     return (
-        <div className="w-screen min-h-screen flex justify-center items-center bg-red-800 p-4 font-sans">
+        <div className="w-screen min-h-screen flex justify-center items-center bg-violet-900 p-4 font-sans">
             <div className="flex flex-col w-full max-w-6xl bg-white rounded-xl overflow-hidden md:flex-row border border-slate-200">
                 
                 <EditForm 

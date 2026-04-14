@@ -28,22 +28,22 @@ export const EditForm = (props: EditFormProps) => {
 
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Input name="Nome" id="name" value={props.name} onChange={(e) => props.setName(e.target.value)} placeholder="Seu nome" />
-                    <Input name="GitHub" id="github" value={props.github} onChange={(e) => props.setGithub(e.target.value)} placeholder="Usuário GitHub" />
+                    <Input name="Nome" id="name" value={props.name} onChange={(e) => props.setName(e.target.value)} placeholder="ex. Pietro" />
+                    <Input name="GitHub" id="github" value={props.github} onChange={(e) => props.setGithub(e.target.value)} placeholder="ex. @user" />
                 </div>
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                    <Input name="Linkedin" id="linkedin" value={props.linkedin} onChange={(e) => props.setLinkedin(e.target.value)} placeholder="User" />
-                    <Input name="Instagram" id="instagram" value={props.instagram} onChange={(e) => props.setInstagram(e.target.value)} placeholder="User" />
-                    <Input name="TikTok" id="tiktok" value={props.tiktok} onChange={(e) => props.setTiktok(e.target.value)} placeholder="User" />
-                    <Input name="Facebook" id="facebook" value={props.facebook} onChange={(e) => props.setFacebook(e.target.value)} placeholder="User" />
+                    <Input name="Linkedin" id="linkedin" value={props.linkedin} onChange={(e) => props.setLinkedin(e.target.value)} placeholder="ex. user" />
+                    <Input name="Instagram" id="instagram" value={props.instagram} onChange={(e) => props.setInstagram(e.target.value)} placeholder="ex. user" />
+                    <Input name="TikTok" id="tiktok" value={props.tiktok} onChange={(e) => props.setTiktok(e.target.value)} placeholder="ex. user" />
+                    <Input name="Facebook" id="facebook" value={props.facebook} onChange={(e) => props.setFacebook(e.target.value)} placeholder="ex. user" />
                 </div>
 
                 <div className="pt-4 space-y-4">
                     <h3 className="font-medium text-slate-700">Links Adicionais</h3>
                     {props.links.map((link, index) => (
                         <div key={index} className="flex gap-2 p-3 bg-slate-50 border border-slate-200 rounded-lg">
-                            <Input name={`Título ${index + 1}`} id={`title-${index}`} value={link.name} onChange={(e) => props.onLinkChange(index, "name", e.target.value)} placeholder="Ex: Portfólio" />
+                            <Input name={`Título ${index + 1}`} id={`title-${index}`} value={link.name} onChange={(e) => props.onLinkChange(index, "name", e.target.value)} placeholder="ex. Meu site" />
                             <Input name="URL" id={`url-${index}`} value={link.url} onChange={(e) => props.onLinkChange(index, "url", e.target.value)} placeholder="https://..." />
                         </div>
                     ))}

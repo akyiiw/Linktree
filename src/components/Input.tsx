@@ -1,6 +1,5 @@
 import type React from "react";
 
-// Arquivo: Input.tsx
 interface InputProps {
     name: string;
     id: string;
@@ -17,7 +16,7 @@ export function Input(props: InputProps) {
                 {props.name}
             </label>
             <input 
-                className="border border-gray-400 p-2 rounded w-full"
+                className="border border-gray-400 p-2 rounded w-full outline-none transition-colors focus:border-violet-900"
                 type={props.type || "text"}
                 id={props.id}
                 name={props.name} 
